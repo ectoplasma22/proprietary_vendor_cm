@@ -93,6 +93,12 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 endif
 
+# Odexer
+ifeq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_COPY_FILES += \
+    vendor/nameless/prebuilt/etc/init.d/99odex:system/etc/init.d/99odex
+endif
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
